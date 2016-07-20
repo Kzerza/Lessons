@@ -26,25 +26,21 @@ namespace Lessons
 	{
 		public static void Main (string[] args)
 		{
-			MyName.PrintName ();
+			int[] intArray = new int[10];
+			int a = 0;
+
+			Console.Write ("Increment\n");
+			for (int x = 0; x < 10; x++) {
+				intArray [x] = a++;
+				Console.WriteLine (intArray [x]);
+			}
+
+			Console.Write ("Decrement\n");
+			a = 0;
+			for (int x = 0; x < 10; x++) {
+				intArray [x] = ++a;
+				Console.WriteLine (intArray [x]);
+			}
 		}
-
-
-	}
-
-	class MyName
-	{
-		public static void PrintName()
-		{
-			Console.Write ("What you're name?:\n");
-			String name = Console.ReadLine();
-			Console.Write ("My name: ");
-			Console.WriteLine (name);
-
-			Console.Write ("What you're age?:\n");
-			String age = Console.ReadLine();
-			Console.Write ("My age: ");
-			Console.WriteLine (age);
-		}	
 	}
 }
